@@ -1,6 +1,6 @@
 ---
 layout: default
-img: mouse.png
+img: mouse.jpg
 category: Services
 title: Technology at your Service
 description: |
