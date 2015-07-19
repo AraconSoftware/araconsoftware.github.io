@@ -1,0 +1,8 @@
+---
+layout: default
+img: mouse.png
+category: Services
+title: Technology at your Service
+description: |
+---
+Did we say we love technology? We do, we spend hours honing our skills to master our trade. But what differentiates us from many technologists is that we know software is a tool, a means to an end: to fulfil your business needs. We won't risk that by using unproven stacks or spending time on unnecessary tasks. Because we like technology, but we love a happy clients.

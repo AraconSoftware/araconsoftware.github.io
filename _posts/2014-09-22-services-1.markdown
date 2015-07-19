@@ -1,0 +1,8 @@
+---
+layout: default
+img: laptop.jpg
+category: Services
+title: FutureProof Bespoke Solutions
+description: |
+---
+  We understand that one size does not fit all when it comes to software solutions and your business needs. We understand that your solution needs to be designed around your business objectives. We design, develop, and deliver the right product, and we make sure it can be easily expanded in the future to grow along your business.
