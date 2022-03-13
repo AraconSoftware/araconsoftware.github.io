@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://aracon.com
-title: Aracon Software Ltd
+url: https://aracon.com
+title: Araconwiss GmbH
 email: pvillega@aracon.com
 author: Pere Villega
-description: > # "Software consultancy based in London.	
+description: > # "Software consultancy based in Basel, Switzerland.
     We develop the software you deserve."
 
 # ----------------------- #
@@ -28,4 +28,3 @@ social:
     url: https://github.com/pvillega
   - title: linkedin
     url: https://uk.linkedin.com/in/perevillega
-
