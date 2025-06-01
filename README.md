@@ -1,3 +1,3 @@
-# Araconwiss GmbH
+# Aracon Software SL
 
 Company page
