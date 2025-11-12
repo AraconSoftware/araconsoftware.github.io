@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="my-20">
+  <div class="max-w-4xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+      <div class="flex gap-4">
+        <a
+          href="https://www.linkedin.com/in/perevillega/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-600 hover:text-slate-900 transition"
+          aria-label="LinkedIn">
+          <Icon class="w-6 h-6" name="bx:bxl-linkedin" />
+        </a>
+        <a
+          href="https://github.com/pvillega"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-600 hover:text-slate-900 transition"
+          aria-label="GitHub">
+          <Icon class="w-6 h-6" name="bx:bxl-github" />
+        </a>
+        <a
+          href="https://bsky.app/profile/perevillega.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-600 hover:text-slate-900 transition"
+          aria-label="Bluesky">
+          <Icon class="w-6 h-6" name="bx:bxs-cloud" />
+        </a>
+      </div>
+    </div>
+    <p class="text-center text-sm text-slate-500">
+      Copyright © {new Date().getFullYear()} ARACON SOFTWARE S.L.U. All rights reserved.
+    </p>
+    <p class="text-center text-xs text-slate-500 mt-2">
+      NIF: B21636643 · Based in Basel, Switzerland
+    </p>
+  </div>
+</footer>

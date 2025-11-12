@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import profileImage from "@/assets/profile.svg";
+---
+
+<div id="about" class="mt-24 max-w-4xl mx-auto scroll-mt-24">
+  <div class="bg-slate-50 rounded-2xl p-8 md:p-12">
+    <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+      <div class="shrink-0">
+        <Picture
+          src={profileImage}
+          alt="Pere Villega"
+          widths={[200, 300]}
+          sizes="(max-width: 768px) 200px, 300px"
+          class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover"
+          loading="lazy"
+          format="avif"
+        />
+      </div>
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">Pere Villega</h2>
+        <p class="text-xl text-slate-600 mb-4">Founder & Principal Consultant</p>
+        <p class="text-slate-700 mb-6 leading-relaxed">
+          With extensive experience across startups, established companies, and large corporations,
+          I bring a pragmatic approach to software development that combines technical excellence
+          with organizational improvement. I believe in leaving teams better than I found them,
+          focusing not just on deliverables but on the practices and knowledge that create lasting value.
+        </p>
+        <div class="flex gap-4 justify-center md:justify-start flex-wrap">
+          <a
+            href="https://www.linkedin.com/in/perevillega/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            <Icon class="w-5 h-5" name="bx:bxl-linkedin" />
+            LinkedIn Profile
+          </a>
+          <a
+            href="https://perevillega.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 hover:bg-slate-100 transition">
+            <Icon class="w-5 h-5" name="bx:bxs-user-circle" />
+            Personal Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center">
+    <p class="text-slate-600 text-sm">
+      <strong>ARACON SOFTWARE S.L.U.</strong> · NIF: B21636643 · Software Consultancy based in Basel, Switzerland
+    </p>
+  </div>
+</div>

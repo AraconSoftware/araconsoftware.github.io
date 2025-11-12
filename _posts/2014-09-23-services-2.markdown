@@ -1,8 +1,0 @@
----
-layout: default
-img: ipad.png
-category: Services
-title: Reliable Project Delivery
-description: |
----
-  We follow state of the art practices to guarantee the success of your project. We make sure you get your product when you need it, at the agreed cost, and with the expected quality.  

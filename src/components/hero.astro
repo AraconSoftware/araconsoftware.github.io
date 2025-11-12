@@ -1,0 +1,35 @@
+---
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid place-items-center pt-16 pb-8 md:pt-20 md:pb-24">
+  <div class="text-center max-w-4xl">
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Software excellence that transforms your business
+    </h1>
+    <p class="text-lg mt-6 text-slate-600 max-w-3xl mx-auto leading-relaxed">
+      ARACON SOFTWARE delivers expert software development and IT advisory services.
+      We don't just write code—we elevate teams, improve practices, and create
+      lasting value beyond the deliverables.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <Link
+        href="#contact"
+        class="flex gap-2 items-center justify-center">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-envelope" />
+        Request a Consultation
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        href="#services"
+        class="flex gap-2 items-center justify-center">
+        <Icon class="text-black w-5 h-5" name="bx:bxs-briefcase" />
+        Our Services
+      </Link>
+    </div>
+  </div>
+</main>

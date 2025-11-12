@@ -1,8 +1,0 @@
----
-layout: default
-img: laptop.jpg
-category: Services
-title: Bespoke Solutions
-description: |
----
-  We understand that one size does not fit all when it comes to software solutions and your business needs. We design, develop, and deliver the right product, and we make sure it can grow along your business.

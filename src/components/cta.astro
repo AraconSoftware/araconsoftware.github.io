@@ -1,0 +1,28 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  id="contact"
+  class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center scroll-mt-24">
+  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+    Let's build something exceptional
+  </h2>
+  <p class="text-slate-400 mt-4 text-lg md:text-xl max-w-2xl">
+    Ready to elevate your software development? Schedule a consultation to discuss
+    how we can help transform your technology and teams.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 mt-8">
+    <Link
+      href="mailto:pvillega@aracon.com?subject=Consultation%20Request"
+      style="inverted"
+      class="flex gap-2 items-center justify-center">
+      <Icon class="w-5 h-5" name="bx:bxs-envelope" />
+      pvillega@aracon.com
+    </Link>
+  </div>
+  <p class="text-slate-500 text-sm mt-6">
+    Send me a calendar invite—I'm ready when you are.
+  </p>
+</div>

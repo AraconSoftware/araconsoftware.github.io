@@ -1,5 +1,19 @@
-_site
-.sass-cache
-.history/
+# Build outputs
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment and system files
 .DS_Store
+.history/
 .lh
+
+# Lock files (keep package-lock.json but ignore pnpm/yarn)
+pnpm-lock.yaml
+yarn.lock
+
+# Old Jekyll files
+_site/
+.sass-cache/

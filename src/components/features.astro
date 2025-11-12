@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Custom Software Development",
+    description:
+      "Full-stack development expertise from backend systems to user interfaces. Building robust, scalable solutions that solve real business problems.",
+    icon: "bx:bxs-component",
+  },
+  {
+    title: "IT Advisory & Consulting",
+    description:
+      "Strategic technology guidance and architecture design. Making informed decisions about your tech stack, infrastructure, and development practices.",
+    icon: "bx:bxs-brain",
+  },
+  {
+    title: "System Architecture",
+    description:
+      "Design and implementation of scalable, maintainable architectures. Focus on long-term sustainability and team productivity.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Technical Leadership",
+    description:
+      "More than just code delivery—improving team practices, establishing better workflows, and leaving your organization stronger than before.",
+    icon: "bx:bxs-group",
+  },
+  {
+    title: "Stack Agnostic Expertise",
+    description:
+      "Deep experience with JVM languages (Scala), Go, TypeScript, Rust, and more. Leveraging AI tools for enhanced delivery—technology choice driven by design, not limitation.",
+    icon: "bx:bxs-chip",
+  },
+  {
+    title: "Results That Last",
+    description:
+      "Deliverables plus the 'glue work' that makes teams effective. Process improvements, knowledge transfer, and sustainable practices that outlive the engagement.",
+    icon: "bx:bxs-trophy",
+  },
+];
+---
+
+<div id="services" class="mt-16 md:mt-0 scroll-mt-24">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Comprehensive software services
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    From development to advisory, we deliver technical excellence combined with
+    the organizational improvements that create lasting value.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
