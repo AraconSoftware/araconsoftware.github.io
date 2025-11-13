@@ -1,0 +1,34 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  id="contact"
+  class="bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-2xl flex flex-col items-center text-center scroll-mt-24 shadow-2xl relative overflow-hidden">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+  </div>
+
+  <div class="relative z-10">
+    <h2 class="text-white text-4xl md:text-6xl tracking-tight font-bold">
+      Let's build something exceptional
+    </h2>
+    <p class="text-blue-100 mt-4 text-lg md:text-xl max-w-2xl">
+      Ready to elevate your software development? Schedule a consultation to discuss
+      how we can help transform your technology and teams.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+      <a
+        href="mailto:pvillega@aracon.com?subject=Consultation%20Request"
+        class="inline-flex gap-2 items-center justify-center px-8 py-4 bg-white text-slate-900 rounded-lg hover:bg-blue-50 transition-all font-medium shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5">
+        <Icon class="w-5 h-5 text-blue-600" name="bx:bxs-envelope" />
+        pvillega@aracon.com
+      </a>
+    </div>
+    <p class="text-cyan-200 text-sm mt-6">
+      Send me a calendar invite—I'm ready when you are.
+    </p>
+  </div>
+</div>

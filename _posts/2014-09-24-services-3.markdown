@@ -1,8 +1,0 @@
----
-layout: default
-img: mouse.jpg
-category: Services
-title: Technology at your Service
-description: |
----
-We love technology, but we know that software is but a means to an end: to fulfil your business needs. We like technology, but we love happy clients.

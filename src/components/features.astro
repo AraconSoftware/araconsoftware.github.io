@@ -1,0 +1,100 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Custom Software Development",
+    description:
+      "Full-stack development expertise from backend systems to user interfaces. Building robust, scalable solutions that solve real business problems.",
+    icon: "bx:bxs-component",
+  },
+  {
+    title: "IT Advisory & Consulting",
+    description:
+      "Strategic technology guidance and architecture design. Making informed decisions about your tech stack, infrastructure, and development practices.",
+    icon: "bx:bxs-brain",
+  },
+  {
+    title: "System Architecture",
+    description:
+      "Design and implementation of scalable, maintainable architectures. Focus on long-term sustainability and team productivity.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Technical Leadership",
+    description:
+      "More than just code delivery—improving team practices, establishing better workflows, and leaving your organization stronger than before.",
+    icon: "bx:bxs-group",
+  },
+  {
+    title: "Mentoring & Coaching",
+    description:
+      "One-on-one guidance for developers and technical leads. Helping professionals grow their skills, navigate career decisions, and become more effective in their roles.",
+    icon: "bx:bxs-user-badge",
+  },
+  {
+    title: "Teaching & Training",
+    description:
+      "Technical workshops and training programs for teams. From fundamentals to advanced topics, tailored to your organization's needs and technical stack.",
+    icon: "bx:bxs-book-content",
+  },
+  {
+    title: "Speaking & Conferences",
+    description:
+      "Tech talks and conference presentations on software development, architecture, and engineering practices. Sharing insights and experiences with the broader community.",
+    icon: "bx:bxs-microphone",
+  },
+  {
+    title: "Stack Agnostic Expertise",
+    description:
+      "Deep experience with JVM languages (Scala), Go, TypeScript, Rust, and more. Leveraging AI tools for enhanced delivery—technology choice driven by design, not limitation.",
+    icon: "bx:bxs-chip",
+  },
+  {
+    title: "Results That Last",
+    description:
+      "Deliverables plus the 'glue work' that makes teams effective. Process improvements, knowledge transfer, and sustainable practices that outlive the engagement.",
+    icon: "bx:bxs-trophy",
+  },
+];
+---
+
+<div id="services" class="mt-16 md:mt-0 scroll-mt-24">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Comprehensive software services
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    From development to advisory, we deliver technical excellence combined with
+    the organizational improvements that create lasting value.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item, index) => {
+      const colors = [
+        "from-blue-500 to-cyan-500",
+        "from-cyan-500 to-teal-500",
+        "from-teal-500 to-emerald-500",
+        "from-blue-600 to-indigo-600",
+        "from-emerald-500 to-green-500",
+        "from-amber-500 to-orange-500",
+        "from-rose-500 to-pink-500",
+        "from-indigo-600 to-purple-600",
+        "from-purple-600 to-pink-600",
+      ];
+      return (
+        <div class="flex gap-4 items-start group">
+          <div class={`mt-1 bg-gradient-to-br ${colors[index % colors.length]} rounded-xl p-2 w-10 h-10 shrink-0 shadow-lg group-hover:shadow-xl transition-shadow`}>
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-slate-900">{item.title}</h3>
+            <p class="text-slate-600 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
