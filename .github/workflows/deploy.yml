@@ -5,6 +5,10 @@ on:
   push:
     branches: ["master", "main"]
 
+  # Runs on pull requests for build validation
+  pull_request:
+    branches: ["master", "main"]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -59,25 +63,31 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Build with Astro
+      - name: Build with Astro (Production)
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+
+      - name: Build with Astro (Dry run for PRs)
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} astro build
+        working-directory: ${{ env.BUILD_PATH }}
+        if: github.event_name == 'pull_request'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ env.BUILD_PATH }}/dist
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
 
   deploy:
     name: Deploy
@@ -86,8 +96,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    # Only deploy on main/master branch
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    # Only deploy on pushes to main/master branch (not PRs)
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
