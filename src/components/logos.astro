@@ -1,11 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import profileImage from "@/assets/profile.svg";
+import profileImage from "@/assets/linkedin_profile.jpeg";
 ---
 
 <div id="about" class="mt-24 max-w-4xl mx-auto scroll-mt-24">
-  <div class="bg-slate-50 rounded-2xl p-8 md:p-12">
+  <div class="bg-gradient-to-br from-slate-50 to-blue-50/40 rounded-2xl p-8 md:p-12 shadow-lg border border-slate-200/50">
     <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
       <div class="shrink-0">
         <Picture
@@ -13,9 +13,9 @@ import profileImage from "@/assets/profile.svg";
           alt="Pere Villega"
           widths={[200, 300]}
           sizes="(max-width: 768px) 200px, 300px"
-          class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover"
+          class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover shadow-xl ring-4 ring-white"
           loading="lazy"
-          format="avif"
+          format="webp"
         />
       </div>
       <div class="flex-1 text-center md:text-left">
@@ -32,7 +32,7 @@ import profileImage from "@/assets/profile.svg";
             href="https://www.linkedin.com/in/perevillega/"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
             <Icon class="w-5 h-5" name="bx:bxl-linkedin" />
             LinkedIn Profile
           </a>
@@ -40,8 +40,8 @@ import profileImage from "@/assets/profile.svg";
             href="https://perevillega.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 px-4 py-2 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 hover:bg-slate-100 transition">
-            <Icon class="w-5 h-5" name="bx:bxs-user-circle" />
+            class="flex items-center gap-2 px-4 py-2 border-2 border-blue-200 text-slate-700 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all shadow-md hover:shadow-lg">
+            <Icon class="w-5 h-5 text-blue-600" name="bx:bxs-user-circle" />
             Personal Site
           </a>
         </div>
@@ -51,7 +51,7 @@ import profileImage from "@/assets/profile.svg";
 
   <div class="mt-12 text-center">
     <p class="text-slate-600 text-sm">
-      <strong>ARACON SOFTWARE S.L.U.</strong> · NIF: B21636643 · Software Consultancy based in Basel, Switzerland
+      <strong>ARACON SOFTWARE S.L.U.</strong> · NIF: B21636643 · Software Consultancy based in Barcelona, Spain
     </p>
   </div>
 </div>
