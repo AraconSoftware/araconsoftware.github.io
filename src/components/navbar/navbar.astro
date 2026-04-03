@@ -1,6 +1,5 @@
 ---
 import Container from "@/components/container.astro";
-import Link from "@/components/ui/link.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Picture } from "astro:assets";
 import logo from "@/assets/logo.png";
@@ -31,13 +30,13 @@ const menuitems = [
             alt="ARACON SOFTWARE"
             widths={[80, 120]}
             sizes="80px"
-            class="h-10 w-auto"
+            class="h-10 w-auto invert"
             loading="eager"
             format="webp"
           />
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-4 h-4 text-[var(--color-text-secondary)]" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
@@ -47,22 +46,14 @@ const menuitems = [
               <li>
                 <a
                   href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  class="flex lg:px-3 py-2 items-center text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors text-sm">
                   <span>{item.title}</span>
                 </a>
               </li>
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3">
-          <Link href="#contact" block size="md">Get in Touch</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <Link href="#contact" size="md">Get in Touch</Link>
-      </div>
-    </div>
   </header>
 </Container>

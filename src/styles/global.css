@@ -7,22 +7,97 @@
     Bricolage Grotesque Variable, Inter Variable, Inter, ui-sans-serif,
     system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --color-bg-deep: #0A0F1C;
+  --color-bg-surface: #141824;
+  --color-bg-footer: #080B14;
+  --color-border-card: #1E2436;
+  --color-text-primary: #E8ECF4;
+  --color-text-secondary: #8892A8;
+  --color-text-tertiary: #6B7280;
+  --color-accent-cyan: #00D4FF;
+  --color-accent-violet: #7C5CFC;
+  --color-accent-amber: #F5A623;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-border-card);
   }
+
+  body {
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Grain texture overlay — applied via class="grain" on a container */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Animated gradient orb */
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orb-drift 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.gradient-orb--cyan {
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+}
+
+.gradient-orb--violet {
+  background: radial-gradient(circle, rgba(124, 92, 252, 0.08) 0%, transparent 70%);
+  animation-delay: -6s;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-accent-cyan), var(--color-accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* CTA button glow */
+.btn-glow {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.25);
+  transform: translateY(-1px);
 }

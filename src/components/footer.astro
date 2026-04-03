@@ -2,41 +2,37 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="my-20">
-  <div class="max-w-4xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+<footer class="bg-[var(--color-bg-footer)] py-8 mt-8">
+  <div class="max-w-(--breakpoint-xl) mx-auto px-5">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="text-center sm:text-left">
+        <div class="flex items-center gap-2 justify-center sm:justify-start mb-2">
+          <span class="text-[var(--color-text-secondary)] text-xs font-semibold">
+            ARACON SOFTWARE S.L.U.
+          </span>
+        </div>
+        <p class="text-[var(--color-text-tertiary)] text-[10px]">
+          NIF: B21636643 · Barcelona, Spain · © {new Date().getFullYear()}
+        </p>
+      </div>
       <div class="flex gap-4">
         <a
           href="https://www.linkedin.com/in/perevillega/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-slate-600 hover:text-blue-600 transition-colors transform hover:scale-110"
+          class="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
           aria-label="LinkedIn">
-          <Icon class="w-6 h-6" name="bx:bxl-linkedin" />
+          <Icon class="w-5 h-5" name="bx:bxl-linkedin" />
         </a>
         <a
-          href="https://github.com/pvillega"
+          href="https://perevillega.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-slate-600 hover:text-slate-900 transition-colors transform hover:scale-110"
-          aria-label="GitHub">
-          <Icon class="w-6 h-6" name="bx:bxl-github" />
-        </a>
-        <a
-          href="https://bsky.app/profile/perevillega.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-slate-600 hover:text-cyan-600 transition-colors transform hover:scale-110"
-          aria-label="Bluesky">
-          <Icon class="w-6 h-6" name="bx:bxs-cloud" />
+          class="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
+          aria-label="Personal Site">
+          <Icon class="w-5 h-5" name="bx:bxs-user-circle" />
         </a>
       </div>
     </div>
-    <p class="text-center text-sm text-slate-500">
-      Copyright © {new Date().getFullYear()} ARACON SOFTWARE S.L.U. All rights reserved.
-    </p>
-    <p class="text-center text-xs text-slate-500 mt-2">
-      NIF: B21636643 · Based in Barcelona, Spain
-    </p>
   </div>
 </footer>
