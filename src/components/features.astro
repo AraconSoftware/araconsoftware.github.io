@@ -1,100 +1,72 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
 
-const features = [
+const services = [
   {
-    title: "Custom Software Development",
+    title: "AI Readiness Audit",
     description:
-      "Full-stack development expertise from backend systems to user interfaces. Building robust, scalable solutions that solve real business problems.",
-    icon: "bx:bxs-component",
+      "We assess your data, infrastructure, and team. You get a prioritized roadmap with clear next steps.",
+    gradient: "from-[#00D4FF] to-[#7C5CFC]",
+    icon: "◆",
   },
   {
-    title: "IT Advisory & Consulting",
+    title: "Production AI Systems",
     description:
-      "Strategic technology guidance and architecture design. Making informed decisions about your tech stack, infrastructure, and development practices.",
-    icon: "bx:bxs-brain",
+      "End-to-end AI infrastructure that ships. Model serving, RAG pipelines, LLM integration, monitoring.",
+    gradient: "from-[#7C5CFC] to-[#F5A623]",
+    icon: "⚙",
   },
   {
-    title: "System Architecture",
+    title: "Agent Orchestration",
     description:
-      "Design and implementation of scalable, maintainable architectures. Focus on long-term sustainability and team productivity.",
-    icon: "bx:bxs-server",
+      "Multi-agent systems that scale your operations 10x. Design, build, deploy, monitor.",
+    gradient: "from-[#00D4FF] to-[#10B981]",
+    icon: "★",
   },
   {
-    title: "Technical Leadership",
+    title: "Embedded Engineering",
     description:
-      "More than just code delivery—improving team practices, establishing better workflows, and leaving your organization stronger than before.",
-    icon: "bx:bxs-group",
+      "Engineers deployed into your team on retainer. We integrate, we ship, we transfer knowledge.",
+    gradient: "from-[#F5A623] to-[#EF4444]",
+    icon: "⚖",
   },
   {
-    title: "Mentoring & Coaching",
+    title: "Production Engineering",
     description:
-      "One-on-one guidance for developers and technical leads. Helping professionals grow their skills, navigate career decisions, and become more effective in their roles.",
-    icon: "bx:bxs-user-badge",
-  },
-  {
-    title: "Teaching & Training",
-    description:
-      "Technical workshops and training programs for teams. From fundamentals to advanced topics, tailored to your organization's needs and technical stack.",
-    icon: "bx:bxs-book-content",
-  },
-  {
-    title: "Speaking & Conferences",
-    description:
-      "Tech talks and conference presentations on software development, architecture, and engineering practices. Sharing insights and experiences with the broader community.",
-    icon: "bx:bxs-microphone",
-  },
-  {
-    title: "Stack Agnostic Expertise",
-    description:
-      "Deep experience with JVM languages (Scala), Go, TypeScript, Rust, and more. Leveraging AI tools for enhanced delivery—technology choice driven by design, not limitation.",
-    icon: "bx:bxs-chip",
-  },
-  {
-    title: "Results That Last",
-    description:
-      "Deliverables plus the 'glue work' that makes teams effective. Process improvements, knowledge transfer, and sustainable practices that outlive the engagement.",
-    icon: "bx:bxs-trophy",
+      "Distributed systems, data pipelines, APIs, infrastructure. The foundation everything runs on.",
+    gradient: "from-[#8892A8] to-[#E8ECF4]",
+    icon: "▭",
   },
 ];
 ---
 
-<div id="services" class="mt-16 md:mt-0 scroll-mt-24">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Comprehensive software services
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    From development to advisory, we deliver technical excellence combined with
-    the organizational improvements that create lasting value.
-  </p>
-</div>
+<div id="services" class="py-8 md:py-12 scroll-mt-24 max-w-5xl mx-auto">
+  <div class="glass-card p-8 md:p-12 shadow-2xl">
+  <div class="text-center mb-12">
+    <p class="text-[var(--color-text-secondary)] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+      What we do
+    </p>
+    <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] tracking-tight">
+      Our Services
+    </h2>
+  </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item, index) => {
-      const colors = [
-        "from-blue-500 to-cyan-500",
-        "from-cyan-500 to-teal-500",
-        "from-teal-500 to-emerald-500",
-        "from-blue-600 to-indigo-600",
-        "from-emerald-500 to-green-500",
-        "from-amber-500 to-orange-500",
-        "from-rose-500 to-pink-500",
-        "from-indigo-600 to-purple-600",
-        "from-purple-600 to-pink-600",
-      ];
-      return (
-        <div class="flex gap-4 items-start group">
-          <div class={`mt-1 bg-gradient-to-br ${colors[index % colors.length]} rounded-xl p-2 w-10 h-10 shrink-0 shadow-lg group-hover:shadow-xl transition-shadow`}>
-            <Icon class="text-white" name={item.icon} />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+    {
+      services.map((service) => (
+        <div class="glass-card p-6">
+          <div
+            class={`w-9 h-9 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center mb-4`}>
+            <span class="text-[var(--color-bg-deep)] text-sm">{service.icon}</span>
           </div>
-          <div>
-            <h3 class="font-semibold text-lg text-slate-900">{item.title}</h3>
-            <p class="text-slate-600 mt-2 leading-relaxed">{item.description}</p>
-          </div>
+          <h3 class="text-[var(--color-text-primary)] font-semibold text-sm mb-2">
+            {service.title}
+          </h3>
+          <p class="text-[var(--color-text-secondary)] text-xs leading-relaxed">
+            {service.description}
+          </p>
         </div>
-      );
-    })
-  }
+      ))
+    }
+  </div>
+  </div>
 </div>

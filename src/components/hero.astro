@@ -1,35 +1,28 @@
 ---
-import Link from "@/components/ui/link.astro";
-import { Icon } from "astro-icon/components";
+
 ---
 
-<main
-  class="grid place-items-center pt-16 pb-8 md:pt-20 md:pb-24 relative">
-  <!-- Background gradient -->
-  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/30"></div>
+<main class="relative pt-20 pb-10 md:pt-28 md:pb-16 overflow-hidden">
+  <!-- Gradient orbs -->
+  <div class="gradient-orb gradient-orb--cyan w-[500px] h-[400px] -top-[100px] left-1/2 -translate-x-1/2"></div>
+  <div class="gradient-orb gradient-orb--violet w-[350px] h-[350px] -bottom-[120px] -right-[60px]"></div>
 
-  <div class="text-center max-w-4xl">
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">
-      Software excellence that transforms your business
+  <div class="relative z-10 text-center max-w-3xl mx-auto px-5">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+      <span class="text-[var(--color-text-primary)]">Production AI systems.</span>
+      <br />
+      <span class="text-gradient">Shipped, not pitched.</span>
     </h1>
-    <p class="text-lg mt-6 text-slate-700 max-w-3xl mx-auto leading-relaxed">
-      ARACON SOFTWARE delivers expert software development and IT advisory services.
-      We don't just write code—we elevate teams, improve practices, and create
-      lasting value beyond the deliverables.
+    <p class="text-base md:text-lg mt-6 text-[var(--color-text-secondary)] max-w-2xl mx-auto leading-relaxed">
+      We deploy engineers who build real AI infrastructure — from readiness
+      audits to production systems that create capabilities your team didn't
+      have before.
     </p>
-    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+    <div class="mt-10">
       <a
-        href="#contact"
-        class="inline-flex gap-2 items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-medium">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-envelope" />
-        Request a Consultation
-      </a>
-      <a
-        href="#services"
-        class="inline-flex gap-2 items-center justify-center px-6 py-3 bg-white text-slate-700 rounded-lg hover:bg-slate-50 transition-all border-2 border-slate-200 hover:border-blue-300 shadow-md hover:shadow-lg font-medium">
-        <Icon class="text-blue-600 w-5 h-5" name="bx:bxs-briefcase" />
-        Our Services
+        href="mailto:pvillega@aracon.com?subject=Inquiry"
+        class="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[var(--color-accent-cyan)] to-[var(--color-accent-violet)] text-[var(--color-bg-deep)] rounded-lg font-semibold text-sm btn-glow">
+        Get in Touch
       </a>
     </div>
   </div>
